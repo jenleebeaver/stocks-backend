@@ -1,7 +1,7 @@
 Portfolio
 has_many :stocks 
 ? is it ok to use the same attributes as the API ?
-:name - string (this would be saved as :s or :display symbol from API)  
+:s - string (symbol from API)  
 :p (last price) -float
 
 Stocks
