@@ -1,3 +1,5 @@
+MVCs and Associations:
+
 User 
 *build out later*
 has_many :portfolios
