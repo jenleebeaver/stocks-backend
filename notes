@@ -6,7 +6,7 @@ has_many :portfolios
 :password_digest -string
 (include any other verification attributes)
 
-Portfolio
+!Portfolio
 has_many :stocks 
 *belongs_to :user --build out later--*
 ? is it ok to use the same attributes as the API ?
