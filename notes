@@ -4,7 +4,7 @@ has_many :portfolios
 :name - string
 :password -string 
 :password_digest -string
-(include any other verification attributes)
+(include any other verification attributes and validations)
 
 !Portfolio
 has_many :stocks 
