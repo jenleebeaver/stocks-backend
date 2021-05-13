@@ -1,0 +1,15 @@
+Portfolio
+has_many :stocks 
+? is it ok to use the same attributes as the API ?
+:name - string (this would be saved as :s or :display symbol from API)  
+:p (last price) -float
+
+Stocks
+belongs_to :portfolio 
+*belongs_to :user -> *build out later*
+:s (symbol), - string,
+:p (last price), -float,
+:display_symbol, -string,
+:description, -string 
+:portfolio_id, -integer
+:updated_at, -datetime --> this data is included in the table 
