@@ -1,2 +1,2 @@
-class StocksController < ApplicationController
+class Api::V1::StocksController < ApplicationController
 end
