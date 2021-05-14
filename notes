@@ -4,9 +4,12 @@ User
 *build out later*
 has_many :portfolios
 :name - string
+:email - string
+:bio - string
+:image_url - string
 :password -string 
 :password_digest -string
-(include any other verification attributes and validations)
+(include any other verification attributes, validations, and has_secure_password)
 
 !Portfolio
 has_many :stocks 
@@ -21,13 +24,16 @@ belongs_to :portfolio
 belongs_to :portfolio_stock
 :s (symbol), - string,
 :p (last price), -float,
-:description, -string 
 :portfolio_id, -integer
 :updated_at, -datetime --> this data is included in the table 
 
-!Portfolio_Stock
+!Portfolio_Stock (is this being used like a category?)
 *can use this later to show amount of stock in portfolio*
 has_many :stocks
 has_many :portfolios, :through :stocks
 :portfolio_id -integer
 :stock_id -integer 
+
+?Category 
+has_many :stocks, dependent: :destroy 
+:finnhubIndustry, string (note: In companyProfile2 in finnhub API)
