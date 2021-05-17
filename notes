@@ -14,8 +14,7 @@ has_many :portfolios
 (include any other verification attributes, validations, and has_secure_password)
 
 !Portfolio X
-has_many :stocks
-has_many :cryptoexchanges  
+has_many :stocks  
 has_many :portfolio_stocks, :through :stocks
 *belongs_to :user --build out later--*
 :s - string (symbol from API)  
@@ -48,9 +47,8 @@ belongs_to :portfolio_stock
 :portfolio_id, -bigInt
 :updated_at, -datetime --> this data is included in the table
 
+<this data can be directly taken from the API.> 
 !CryptoExchange X 
-belongs_to :portfolio
-belongs_to :portfolio_stock
 :symbol, -string,
 :displaySymbol, -string,
 :description, -string,
@@ -59,7 +57,6 @@ belongs_to :portfolio_stock
 !Portfolio_Stock X
 *can use this later to show amount of stock in portfolio*
 has_many :stocks
-has_many :cryptoexchanges
 has_many :portfolios, :through :stocks
 :portfolio_id, -bigInt
 :stock_id, -bigInt 
@@ -70,9 +67,6 @@ has_many :portfolios, :through :stocks
 has_many :stocks, dependent: :destroy 
 :finnhubIndustry, string (note: In companyProfile2 in finnhub API)
  
-
-
-
 
 Future Additional Features:
 -candlestick data widget?
