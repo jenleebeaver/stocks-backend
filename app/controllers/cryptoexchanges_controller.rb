@@ -1,0 +1,2 @@
+class CryptoexchangesController < ApplicationController
+end
