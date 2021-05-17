@@ -22,4 +22,6 @@ class Stock < ApplicationRecord
             :peRatio, 
             :portfolio_id, 
             presence: true
+
+    #note: to write custom errors write each validation separately
 end
