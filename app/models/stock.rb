@@ -2,6 +2,8 @@ class Stock < ApplicationRecord
     belongs_to :portfolio
     belongs_to :portfolio_stock
 
+    serialize :peers,Array
+
     validates :s, 
             :p, 
             :description, 
