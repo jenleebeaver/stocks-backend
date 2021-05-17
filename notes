@@ -48,7 +48,7 @@ belongs_to :portfolio_stock
 :portfolio_id, -bigInt
 :updated_at, -datetime --> this data is included in the table
 
-!CryptoExchange -add table 
+!CryptoExchange X 
 belongs_to :portfolio
 belongs_to :portfolio_stock
 :symbol, -string,
@@ -56,7 +56,7 @@ belongs_to :portfolio_stock
 :description, -string,
 :portfolio_id, -bigInt
 
-!Portfolio_Stock -add table 
+!Portfolio_Stock X
 *can use this later to show amount of stock in portfolio*
 has_many :stocks
 has_many :cryptoexchanges
