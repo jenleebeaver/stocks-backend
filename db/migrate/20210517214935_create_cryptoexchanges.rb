@@ -4,7 +4,7 @@ class CreateCryptoexchanges < ActiveRecord::Migration[6.0]
       t.string :symbol
       t.string :displaySymbol
       t.string :description
-      t.bigInt :portfolio_id
+      t.bigint :portfolio_id
 
       t.timestamps
     end

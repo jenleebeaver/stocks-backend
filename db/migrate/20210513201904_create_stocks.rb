@@ -9,8 +9,8 @@ class CreateStocks < ActiveRecord::Migration[6.0]
       t.string :exchange
       t.string :ipo
       t.string :finnhubIndustry 
-      t.bigInt :marketCapitalization
-      t.array :peers
+      t.bigint :marketCapitalization
+      t.text :peers
       t.integer :buy
       t.integer :hold
       t.integer :sell
