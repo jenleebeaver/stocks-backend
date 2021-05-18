@@ -44,6 +44,7 @@ ActiveRecord::Schema.define(version: 2021_05_18_214011) do
     t.integer "strongSell"
     t.float "peRatio"
     t.integer "portfolio_id"
+    t.integer "portfolio_stock_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end

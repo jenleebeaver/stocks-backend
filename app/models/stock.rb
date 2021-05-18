@@ -4,24 +4,9 @@ class Stock < ApplicationRecord
 
     serialize :peers,Array
 
-    validates :s, 
-            :p, 
-            :description, 
-            :country, 
-            :currency, 
-            :exchange, 
-            :ipo, 
-            :finnhubIndustry, 
-            :marketCapitalization, 
-            :peers, 
-            :buy, 
-            :hold, 
-            :sell, 
-            :strongBuy, 
-            :strongSell, 
-            :peRatio, 
-            :portfolio_id, 
-            presence: true
+    validates :s, :p, :description, :country, :currency, :exchange, :ipo,:finnhubIndustry, :marketCapitalization, :buy, :hold, :sell, :strongBuy, :strongSell, :peRatio, :portfolio_id, :portfolio_stock_id, presence: true
 
+    #took out :peers
     #note: to write custom errors write each validation separately
 end
+

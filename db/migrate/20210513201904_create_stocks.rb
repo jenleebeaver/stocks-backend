@@ -18,6 +18,7 @@ class CreateStocks < ActiveRecord::Migration[6.0]
       t.integer :strongSell
       t.float :peRatio 
       t.integer :portfolio_id
+      t.integer :portfolio_stock_id
 
       t.timestamps
     end
