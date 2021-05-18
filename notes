@@ -20,7 +20,6 @@ has_many :portfolio_stocks, :through :stocks
 :s - string (symbol from API)  
 :p (last price) -float
 // cryptoexchange 
-:cryptoexchanges, -array * use get /crypto/exchange to get an array of supported cryptoexchanges *
 
 *reminder: key here is to access data by traversing the nested objects of the stock object stocks[companyprofile2])*
 !Stock X
@@ -45,6 +44,7 @@ belongs_to :portfolio_stock
 :strongSell, -integer,
 //* explore where P/E ratio is nested in Basic Financials 
 :portfolio_id, -bigInt
+:portfolio_stock_id, -bigint
 :updated_at, -datetime --> this data is included in the table
 
 <this data can be directly taken from the API.> 
@@ -57,10 +57,9 @@ belongs_to :portfolio_stock
 !Portfolio_Stock X
 *can use this later to show amount of stock in portfolio*
 has_many :stocks
-has_many :portfolios, :through :stocks
+has_many :portfolios, through: :stocks
 :portfolio_id, -bigInt
 :stock_id, -bigInt 
-:cryptoexchange_id, -bigInt
 
 ?Category 
 *review relationship and build out later (review Ayana's videos)
@@ -89,4 +88,5 @@ Future Additional Features:
 -display crypto candles widget 
 -run pattern recognition data on a symbol 
 -Covid19 data based on US state - from CDC API 
+-security features 
 
