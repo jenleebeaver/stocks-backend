@@ -3,7 +3,6 @@ class CreatePortfolioStocks < ActiveRecord::Migration[6.0]
     create_table :portfolio_stocks do |t|
       t.bigint :portfolio_id
       t.bigint :stock_id
-      t.bigint :cryptoexchange_id
 
       t.timestamps
     end
