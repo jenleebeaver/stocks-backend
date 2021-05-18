@@ -1,6 +1,6 @@
 class CreatePortfolioStocks < ActiveRecord::Migration[6.0]
   def change
-    create_table :portfolioStocks do |t|
+    create_table :portfolio_stocks do |t|
       t.bigint :portfolio_id
       t.bigint :stock_id
 

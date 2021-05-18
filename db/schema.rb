@@ -10,9 +10,9 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_05_18_001208) do
+ActiveRecord::Schema.define(version: 2021_05_18_214011) do
 
-  create_table "portfolioStocks", force: :cascade do |t|
+  create_table "portfolio_stocks", force: :cascade do |t|
     t.bigint "portfolio_id"
     t.bigint "stock_id"
     t.datetime "created_at", precision: 6, null: false
