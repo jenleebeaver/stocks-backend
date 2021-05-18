@@ -3,7 +3,6 @@ class CreatePortfolios < ActiveRecord::Migration[6.0]
     create_table :portfolios do |t|
       t.string :s
       t.float :p
-      t.text :cryptoexchanges
 
       t.timestamps
     end
