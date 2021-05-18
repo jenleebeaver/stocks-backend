@@ -12,7 +12,7 @@
 
 ActiveRecord::Schema.define(version: 2021_05_18_001208) do
 
-  create_table "portfolio_stocks", force: :cascade do |t|
+  create_table "portfolioStocks", force: :cascade do |t|
     t.bigint "portfolio_id"
     t.bigint "stock_id"
     t.datetime "created_at", precision: 6, null: false
