@@ -3,6 +3,7 @@ class Api::V1::StocksController < ApplicationController
 
     def index
         #this will route api/v1/portfolios/id/stocks
+        #can do @stocks = Stocks.all if data is not nested 
         @stocks = @portfolio.stocks  
         render json: @stocks
     end
