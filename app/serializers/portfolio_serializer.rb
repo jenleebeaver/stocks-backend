@@ -1,4 +1,4 @@
 class PortfolioSerializer < ActiveModel::Serializer
-  attributes :id, :s, :p, :updated_at
+  attributes :id, :username, :s, :p, :updated_at
   has_many :stocks 
 end

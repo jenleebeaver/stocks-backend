@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_05_18_214011) do
+ActiveRecord::Schema.define(version: 2021_05_25_152606) do
 
   create_table "portfolio_stocks", force: :cascade do |t|
     t.bigint "portfolio_id"
@@ -24,6 +24,7 @@ ActiveRecord::Schema.define(version: 2021_05_18_214011) do
     t.float "p"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.string "username"
   end
 
   create_table "stocks", force: :cascade do |t|
