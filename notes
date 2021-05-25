@@ -13,10 +13,16 @@ has_many :portfolios
 :password_digest -string
 (include any other verification attributes, validations, and has_secure_password)
 
+Accounts 
+*build out later*
+belongs_to :portfolio
+:name - string
+
 !Portfolio X
 has_many :stocks  
 has_many :portfolio_stocks, :through :stocks
 *belongs_to :user --build out later--*
+*has_many :accounts --build out later--*
 :s - string (symbol from API)  
 :p (last price) -float
 // cryptoexchange 
