@@ -22,6 +22,8 @@ gem 'active_model_serializers'
 # closes open ports 
 gem 'shutup'
 
+gem 'pry'
+
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'
 
