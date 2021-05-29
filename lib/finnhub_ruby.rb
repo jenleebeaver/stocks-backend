@@ -7,3 +7,8 @@ FinnhubRuby.configure do |config|
 end
 
 finnhub_client = FinnhubRuby::DefaultApi.new
+
+#where most stock data is 
+finnhubClient.companyProfile2({'symbol': 'AAPL'}, (error, data, response) => {
+    console.log(data)
+});
