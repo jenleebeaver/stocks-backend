@@ -1,8 +1,6 @@
 class CreateStocks < ActiveRecord::Migration[6.0]
   def change
     create_table :stocks do |t|
-      t.string :s
-      t.float :p
       t.string :description
       t.string :country
       t.string :currency
@@ -15,8 +13,7 @@ class CreateStocks < ActiveRecord::Migration[6.0]
       t.integer :hold
       t.integer :sell
       t.integer :strongBuy
-      t.integer :strongSell
-      t.float :peRatio 
+      t.integer :strongSell 
       t.integer :portfolio_id
       t.integer :portfolio_stock_id
 
