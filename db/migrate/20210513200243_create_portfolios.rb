@@ -1,8 +1,7 @@
 class CreatePortfolios < ActiveRecord::Migration[6.0]
   def change
     create_table :portfolios do |t|
-      t.string :s
-      t.float :p
+        t.string :portfolio_name
 
       t.timestamps
     end
