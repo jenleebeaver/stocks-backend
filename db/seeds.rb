@@ -1,11 +1,32 @@
+#manual seed data 
 portfolio = Portfolio.create(portfolio_name: 'JB')
 
-stock = Stock.create(id: 1, description: "I am fake data!", country: "jenland", currency: "jen$", exchange: "JDAQ", ipo: "2,000,000", finnhubIndustry: "jencorps", marketCapitalization: 19000000, peers: ["X", "Y", "Z"], buy: 20, hold: 20, sell: 0, strongBuy: 20, strongSell: 0, portfolio_id: 1, portfolio_stock_id: 1)
 
-basic_financial = BasicFinancial.create(id: 1, symbol: 'JEN', peNormalizedAnnual: 17.0, stock_id: 1, portfolio_id: 1)
+#**finnhub ruby gem test code**  
+# const finnhub = require('finnhub');
+ 
+# const api_key = finnhub.ApiClient.instance.authentications['api_key'];
+# api_key.apiKey = FINNHUB_API_KEY 
+# const finnhubClient = new finnhub.DefaultApi()
 
-price = Price.create(id: 1, c: 1000000.00, stock_id: 1, portfolio_id: 1)
+# finnhub_basic_financial = finnhubClient.financials("AAPL", "ic", "annual",                              (error, data, response) => {
+#                             console.log(data)
+#                             });
 
-portfolio_stock = PortfolioStock.create(portfolio_id: 1, stock_id: 1)
+# **get request** 
+# price_resp = RestClient::Request.execute(method: :get,
+#     url: "https://finnhub.io/api/v1/quote?",
+#     headers: {
+#         'Content-Type': 'application/json'
+#     })
+
+# price_data = JSON.parse(resp.body)
+# prices = price_data
+
+# prices.each do |price|
+#     Prices.create(
+#         c: price["c"]
+#     )
+# end
 
 
