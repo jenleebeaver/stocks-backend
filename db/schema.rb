@@ -10,7 +10,16 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_05_27_175435) do
+ActiveRecord::Schema.define(version: 2021_05_28_235517) do
+
+  create_table "basic_financials", force: :cascade do |t|
+    t.string "symbol"
+    t.float "peNormalizedAnnual"
+    t.float "stock_id"
+    t.float "portfolio_id"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
 
   create_table "portfolio_stocks", force: :cascade do |t|
     t.bigint "portfolio_id"
@@ -20,16 +29,20 @@ ActiveRecord::Schema.define(version: 2021_05_27_175435) do
   end
 
   create_table "portfolios", force: :cascade do |t|
-    t.string "s"
-    t.float "p"
+    t.string "portfolio_name"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.string "portfolio_name"
+  end
+
+  create_table "prices", force: :cascade do |t|
+    t.float "c"
+    t.float "stock_id"
+    t.float "portfolio_id"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
   end
 
   create_table "stocks", force: :cascade do |t|
-    t.string "s"
-    t.float "p"
     t.string "description"
     t.string "country"
     t.string "currency"
@@ -43,7 +56,6 @@ ActiveRecord::Schema.define(version: 2021_05_27_175435) do
     t.integer "sell"
     t.integer "strongBuy"
     t.integer "strongSell"
-    t.float "peRatio"
     t.integer "portfolio_id"
     t.integer "portfolio_stock_id"
     t.datetime "created_at", precision: 6, null: false
