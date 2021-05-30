@@ -2,8 +2,7 @@ API: finnhub.io/docs/api
 
 MVCs and Associations:
 
-User 
-*build out later - can use dakota's eventfull walkthroughs*
+!User 
 has_many :portfolios
 :name - string
 :email - string
@@ -13,24 +12,16 @@ has_many :portfolios
 :password_digest -string
 (include any other verification attributes, validations, and has_secure_password)
 
-Accounts 
-*build out later*
-belongs_to :portfolio
-:name - string
-
-!Portfolio X
-has_many :stocks  
-has_many :portfolio_stocks, :through :stocks
-*belongs_to :user --build out later--*
+!Portfolio
+belongs_to :user 
 *has_many :accounts --build out later--*
 :s - string (symbol from API)  
 :p (last price) -float
 // cryptoexchange 
 
 *reminder: key here is to access data by traversing the nested objects of the stock object stocks[companyprofile2])*
-!Stock X
-belongs_to :portfolio 
-belongs_to :portfolio_stock
+Stock Data (get request from frontend) 
+
 :s (symbol), - string,
 :p (last price), -float,
 // below is stock data from Company Profile 2 https://finnhub.io/docs/api/company-profile2
@@ -49,19 +40,18 @@ belongs_to :portfolio_stock
 :strongBuy, -integer,
 :strongSell, -integer,
 //* explore where P/E ratio is nested in Basic Financials 
-:portfolio_id, -bigInt
-:portfolio_stock_id, -bigint
-:updated_at, -datetime --> this data is included in the table
+:updated_at
 
 <this data can be directly taken from the API.> 
 <This will be displayed as <li>>
-!CryptoExchange X 
+CryptoExchange  
 :symbol, -string,
 :displaySymbol, -string,
 :description, -string,
 
 
-!Portfolio_Stock X
+Portfolio_Stock 
+*build out later*
 *can use this later to show amount of stock in portfolio*
 has_many :stocks
 has_many :portfolios, through: :stocks
