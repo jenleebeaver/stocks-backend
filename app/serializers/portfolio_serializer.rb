@@ -1,5 +1,4 @@
 class PortfolioSerializer < ActiveModel::Serializer
-
-  attributes :id, :portfolio_name, :updated_at, :created_at
-
+  include FastJsonapi::ObjectSerializer
+  attributes :id, :portfolio_name, :user_id, :updated_at, :created_at
 end

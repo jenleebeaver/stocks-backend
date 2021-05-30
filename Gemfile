@@ -50,3 +50,8 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 # api calls
 gem 'rest-client', '~> 2.1'
+
+#devise
+gem 'devise'
+gem 'devise-jwt'
+gem 'jsonapi-serializer'

@@ -2,8 +2,8 @@ Rails.application.routes.draw do
 
   namespace :api do
     namespace :v1 do
-      resources :portfolios do
-        #can only access stocks through portfolios 
+      resources :users do
+        resources :portfolios 
       end
     end
   end
