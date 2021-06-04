@@ -7,7 +7,6 @@ class Api::V1::UsersController < ApplicationController
 
     def create
         @user = User.new(user_params)
-        byebug
         if @user.save 
             render json: @user, status: :accepted
         else
@@ -28,7 +27,7 @@ class Api::V1::UsersController < ApplicationController
     private 
 
     def user_params
-        params.require(:user).permit(:user_name, :email, :password, :image_url)
+        params.require(:user).permit(:username, :image, :image_url)
     end
 
     def find_by 

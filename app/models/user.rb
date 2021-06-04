@@ -1,9 +1,13 @@
 class User < ApplicationRecord
-    has_many :portfolios, dependent: :destroy 
-    has_secure_password 
+  has_many :portfolios
+  
+  #active-storage 
+  # has_one_attached :image
+  # Include default devise modules. Others available are:
+  # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
+  devise :database_authenticatable, :registerable,
+         :recoverable, :rememberable, :validatable
 
-    # validates :user_name, presence: true, acceptance: { message: "Please add your name." }
-    # validates :email, presence: true, acceptance: { message: "Please add your email." }
-    # # uniqueness: { case_sensitive: false },
-    # validates :password,  presence: true, length: {in: 6..20, message: "Password must be between 6 and 20 characters." }, confirmation: true 
+  validates :username, presence: true
+  #  acceptance: { message: "Please enter user name." } 
 end
