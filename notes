@@ -4,26 +4,29 @@ MVCs and Associations:
 
 !User 
 has_many :portfolios
-:name - string
-:email - string
-:bio - string
+:username - string
 :image_url - string
-:password -string 
-:password_digest -string
-(include any other verification attributes, validations, and has_secure_password)
+//using devise to add password / email encryption and authentication 
+** can add confirmation tokens for extra authentication later**
 
 !Portfolio
 belongs_to :user 
-*has_many :accounts --build out later--*
+:name -string 
+// add this data on frontend API 
 :s - string (symbol from API)  
 :p (last price) -float
-// cryptoexchange 
+// add cryptoexchange <li> on frontend  
 
 *reminder: key here is to access data by traversing the nested objects of the stock object stocks[companyprofile2])*
-Stock Data (get request from frontend) 
+!Stock Data (get request from frontend) 
 
+//SEARCH
+//BASIC_FINANCIALS
 :s (symbol), - string,
-:p (last price), -float,
+:peNormalizedAnnual -float **want pe long term**
+//QUOTE
+:c (current price), -float,
+
 // below is stock data from Company Profile 2 https://finnhub.io/docs/api/company-profile2
 :country, -string,
 :currency, -string,
@@ -39,12 +42,11 @@ Stock Data (get request from frontend)
 :sell, -integer,
 :strongBuy, -integer,
 :strongSell, -integer,
-//* explore where P/E ratio is nested in Basic Financials 
 :updated_at
 
 <this data can be directly taken from the API.> 
 <This will be displayed as <li>>
-CryptoExchange  
+!CryptoExchange  
 :symbol, -string,
 :displaySymbol, -string,
 :description, -string,
