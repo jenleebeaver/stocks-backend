@@ -1,7 +1,10 @@
 #manual seed data 
-user = User.create(id: 1, user_name: 'JB', email: "test@gmail.com", password: "password", image_url: "https://en.wikipedia.org/wiki/File:Judith_1_(cropped).jpg", password_digest: '', password_confirmation: "password")
+User.destroy_all
+Portfolio.destroy_all 
 
-portfolio = Portfolio.create(id: 1, portfolio_name: 'Test', user_id: 1)
+user = User.create(id: 1, username:"JB", image_url:"https://en.wikipedia.org/wiki/File:Judith_1_(cropped).jpg", email:"jen@gmail.com", password:"123456789")
+
+portfolio = Portfolio.create(portfolio_name: 'Test', user_id: 1)
 
 
 #**finnhub ruby gem test code**  
