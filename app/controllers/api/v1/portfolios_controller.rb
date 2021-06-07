@@ -27,7 +27,7 @@ class Api::V1::PortfoliosController < ApplicationController
     private 
 
     def portfolio_params
-        params.require(:portfolio).permit(:portfolio_name, :users_id)
+        params.require(:portfolio).permit(:portfolio_name, :user_id)
     end
 
     def find_by 
