@@ -1,6 +1,6 @@
 class UserSerializer < ActiveModel::Serializer
-  include FastJsonapi::ObjectSerializer
+  # include FastJsonapi::ObjectSerializer
   has_many :portfolios 
 
-  attributes :id, :username, :image_url, :image
+  attributes :id, :username, :image_url, :email
 end
