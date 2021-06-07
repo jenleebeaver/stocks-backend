@@ -1,8 +1,8 @@
 class Api::V1::UsersController < ApplicationController
 
     def index
-        @users = User.all 
-        render json: @users
+        users = User.all 
+        render json: users
     end
 
     def create
@@ -27,7 +27,7 @@ class Api::V1::UsersController < ApplicationController
     private 
 
     def user_params
-        params.require(:user).permit(:username, :image, :image_url)
+        params.require(:user).permit(:username, :image, :image_url, :email)
     end
 
     def find_by 
