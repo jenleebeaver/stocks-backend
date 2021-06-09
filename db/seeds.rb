@@ -2,10 +2,9 @@
 User.destroy_all
 Portfolio.destroy_all 
 
-user = User.create(id: 1, username:"JB", image_url:"https://en.wikipedia.org/wiki/File:Judith_1_(cropped).jpg", email:"jen@gmail.com", password:"123456789")
+user1 = User.create(id: 1, username:"JB", image_url:"https://en.wikipedia.org/wiki/File:Judith_1_(cropped).jpg", email:"jen@gmail.com", password:"123456789")
 
-portfolio = Portfolio.create(portfolio_name: 'Test', user_id: 1)
-
+portfolio1 = Portfolio.create(portfolio_name: 'Test', user_id: 1)
 
 #**finnhub ruby gem test code**  
 # const finnhub = require('finnhub');

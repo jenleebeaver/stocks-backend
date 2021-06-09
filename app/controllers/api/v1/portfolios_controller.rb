@@ -10,6 +10,8 @@ class Api::V1::PortfoliosController < ApplicationController
         if @portfolio.save 
             render json: @portfolio, status: :accepted
         else
+            puts "error here"
+            puts @portfolio.errors.full_messages
             render json: { errors: @portfolio.errors.full_messages}, status: :unprocessible_entity
         end
     end
