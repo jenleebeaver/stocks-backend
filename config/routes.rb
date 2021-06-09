@@ -2,10 +2,10 @@ Rails.application.routes.draw do
 
   # devise stays out of serializer and namespace routes?
   devise_for :users
-  resources :portfolios 
 
   namespace :api do
     namespace :v1 do
+      resources :portfolios
       resources :users do
         resources :portfolios 
       end
