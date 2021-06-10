@@ -40,6 +40,7 @@ ActiveRecord::Schema.define(version: 2021_06_09_212023) do
     t.datetime "updated_at", precision: 6, null: false
     t.text "watchlist", default: "--- []\n"
     t.index ["user_id"], name: "index_portfolios_on_user_id"
+    t.index ["watchlist"], name: "index_portfolios_on_watchlist"
   end
 
   create_table "users", force: :cascade do |t|

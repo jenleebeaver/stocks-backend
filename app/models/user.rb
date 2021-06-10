@@ -1,5 +1,6 @@
 class User < ApplicationRecord
-  has_many :portfolios
+  #:dependent => :destroy deletes foreign keys when you try to reset or drop a schema 
+  has_many :portfolios, :dependent => :destroy 
   
   #active-storage 
   # has_one_attached :image
