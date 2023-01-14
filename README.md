@@ -1,8 +1,13 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Steps to update application:
 
+i) Update ruby and rails gems <i>(use rvm)</i>
+ii) Run `bundle install`
+iii) run seed file 'bundle exec rails db:seed'
+
+
+-------------------------------------------------
 Things you may want to cover:
 
 * Ruby version
