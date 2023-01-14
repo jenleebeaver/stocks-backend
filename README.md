@@ -2,8 +2,8 @@
 
 Steps to update application:
 
-i) Update ruby and rails gems <i>(use rvm)</i>
-ii) Run `bundle install`
+i) Update ruby and rails gems <i>(use rvm)</i></br>
+ii) Run `bundle install`</br>
 iii) run seed file 'bundle exec rails db:seed'
 
 
